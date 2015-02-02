@@ -1,0 +1,9 @@
+# Friendly URL's
+RewriteEngine on
+Options +FollowSymlinks -Indexes
+
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
